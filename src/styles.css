@@ -2,11 +2,33 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* :root{
-    --primary-color: #0f9499;
-    --secondary-color: #b5a77a;
-    --body-text-color: #596392;
-    --background-color: #8e8181;
-} */
+*{
+    font-family: "Work Sans", sans-serif;
+}
 
+:root{
+    --primary-color: #1B191A;
+    --secondary-color: #FF7104;
+    --body-text-color: #635D4F;
+    --background-color: #A7A49D;
+}
+
+
+
+.black{
+    color: var(--primary-color);
+}
+
+.orange{
+    color: var(--secondary-color);
+}
+
+.brown{
+    color: var(--body-text-color);
+}
+
+.grey{
+    color: var(--background-color);
+}
