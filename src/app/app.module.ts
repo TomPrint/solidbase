@@ -12,6 +12,9 @@ import { CookiePopupComponent } from './shared/cookie-popup/cookie-popup.compone
 import { TermsConditionsComponent } from './pages/terms-conditions/terms-conditions.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { CarouselComponent } from './shared/carousel/carousel.component';
+import { OurWorkComponent } from './pages/our-work/our-work.component';
+import { PricingComponent } from './pages/pricing/pricing.component';
+import { OfferComponent } from './pages/offer/offer.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { CarouselComponent } from './shared/carousel/carousel.component';
     CookiePopupComponent,
     TermsConditionsComponent,
     NavbarComponent,
-    CarouselComponent
+    CarouselComponent,
+    OurWorkComponent,
+    PricingComponent,
+    OfferComponent
   ],
   imports: [
     BrowserModule,
