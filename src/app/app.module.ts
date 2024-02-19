@@ -15,6 +15,7 @@ import { CarouselComponent } from './shared/carousel/carousel.component';
 import { OurWorkComponent } from './pages/our-work/our-work.component';
 import { PricingComponent } from './pages/pricing/pricing.component';
 import { OfferComponent } from './pages/offer/offer.component';
+import { ReactiveFormsModule } from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { OfferComponent } from './pages/offer/offer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
