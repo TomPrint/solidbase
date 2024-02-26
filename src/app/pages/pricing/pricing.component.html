@@ -17,13 +17,11 @@
       </span>
     </h2>
     <p class="text-gray-600">
-      Skorzystaj z formularza, a my zapewnimy Ci bezpłatną i szybką wycenę naszej płyty
-      fundamentowej.
+      Skorzystaj z formularza i wyceń swój projekt.
     </p>
     <p class="text-gray-600 mt-2">
-      Prosimy o wypełnienie formularza poniżej, pozwoli to nam przygotować dokładną i wiarygodną ofertę. Proszę sprawdzić,
-      czy podane dane kontaktowe są prawidłowe, aby umożliwić
-      sprawną wycenę i komunikację z Państwem. Należy wypełnić wszystkie pola formularza.
+      Prosimy o wypełnienie formularza poniżej, pozwoli to nam przygotować dokładną i wiarygodną ofertę. 
+      Należy wypełnić wszystkie pola formularza oznaczone gwiazdką*.
       Jedynym polem opcjonalnym formularza jest komentarz do projektu.
     </p>
   </div>
@@ -32,7 +30,7 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <!-- Name and Email -->
       <div>
-        <label for="name" class="block text-sm font-medium text-gray-700">Imię i nazwisko *</label>
+        <label for="name" class="block text-sm font-medium text-gray-700">Imię i Nazwisko *</label>
         <input
           formControlName="name"
           type="text"
@@ -90,7 +88,7 @@
           </div>
       </div>
       <div>
-        <label for="address" class="block text-sm font-medium text-gray-700">Adres Budowy *</label>
+        <label for="address" class="block text-sm font-medium text-gray-700">Miejsce Budowy *</label>
         <input
           formControlName="address"
           type="text"
@@ -111,7 +109,7 @@
       <div class="md:col-span-2">
         <label
           for="project"
-          class="block text-sm font-medium text-gray-700">Nazwa projektu *</label>
+          class="block text-sm font-medium text-gray-700">Nazwa Inwestycji *</label>
         <input
           formControlName="project"
           type="text"
@@ -208,7 +206,7 @@
         Wymagany wybór.
        </div>
     </div>
-
+<!-- 
     <div>
       <label for="roof" class="block text-sm font-medium text-gray-700">Dach *</label>
       <select
@@ -224,10 +222,10 @@
       <div *ngIf="form.get('roof')?.errors?.['required'] && form.get('roof')?.touched" class="text-red-500">
         Wymagany wybór.
        </div>
-    </div>
+    </div> -->
 
     <div>
-      <label for="geology" class="block text-sm font-medium text-gray-700">Badania geologiczne *</label>
+      <label for="geology" class="block text-sm font-medium text-gray-700">Badania gruntu *</label>
       <select
       formControlName="geology"
         id="geology"
@@ -285,13 +283,7 @@
           name="consent"
           class="rounded border-grey text-orange shadow-sm focus:border-orange focus:ring focus:ring-orange focus:ring-opacity-50"
           required/>
-        <span class="ml-2 text-sm text-gray-600">* Oświadczam niniejszym, że jestem potencjalnym klientem z zamiarem
-          budowy, aktualnie budującym lub sondującym rynek w celu zdobycia
-          danych o kosztach związanych z budową domu.
-          Jednocześnie wyrażam zgodę na przetwarzanie moich danych osobowych w
-          celach marketingowych, także na otrzymywanie informacji handlowych od
-          właściciela strony Solid Base zgodnie z ustawą z dnia 29 sierpnia 1997
-          r. o ochronie danych osobowych (Dz. U.Nr 133. poz. 883).</span>
+        <span class="ml-2 text-sm text-gray-600">* Niniejszym oświadczam, że jako osoba zainteresowana budową domu – czy to w fazie planowania, obecnie realizująca projekt budowlany, bądź też poszukująca informacji na temat przewidywanych kosztów – zgadzam się na przetwarzanie moich danych osobowych dla potrzeb działań marketingowych. Wyrażam również zgodę na odbieranie komunikatów handlowych od firmy Solid Base, zgodnie z przepisami ustawy z 29 sierpnia 1997 roku dotyczącej ochrony danych osobowych (Dziennik Ustaw Nr 133, poz. 883).</span>
       </label>
       <div *ngIf="form.get('consent')?.errors?.['required'] && form.get('consent')?.touched" class="text-red-500">
         Wymagana zgoda.

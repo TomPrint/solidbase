@@ -24,7 +24,7 @@ export class PricingComponent implements OnInit{
       area: ['', [Validators.required, Validators.min(0), Validators.pattern(/^[0-9]+(\.[0-9]{1,2})?$/)]],
       voivodeship: ['', Validators.required],
       storey: ['', Validators.required],
-      roof: ['', Validators.required],
+      // roof: ['', Validators.required],
       geology: ['', Validators.required],
       start: ['', [Validators.required, ValidatorsService.futureDateValidator()]],
       comments: ['', Validators.maxLength(1500)], // Optional field
