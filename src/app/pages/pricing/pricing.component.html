@@ -17,48 +17,61 @@
       </span>
     </h2>
     <p class="text-gray-600">
-      Skorzystaj z formularza, a my zapewnimy Ci bezpłatną i szybką wycenę naszej płyty
-      fundamentowej.
+      Skorzystaj z formularza i wyceń swój projekt.
     </p>
     <p class="text-gray-600 mt-2">
-      Prosimy o wypełnienie formularza poniżej, pozwoli to nam przygotować dokładną i wiarygodną ofertę. Proszę sprawdzić,
-      czy podane dane kontaktowe są prawidłowe, aby umożliwić
-      sprawną wycenę i komunikację z Państwem. Należy wypełnić wszystkie pola formularza.
+      Prosimy o wypełnienie formularza poniżej, pozwoli to nam przygotować dokładną i wiarygodną ofertę. 
+      Należy wypełnić wszystkie pola formularza oznaczone gwiazdką*.
       Jedynym polem opcjonalnym formularza jest komentarz do projektu.
     </p>
   </div>
 
-  <form [formGroup]="form" (ngSubmit)="onSubmit()" class="space-y-6">
+  <form [formGroup]="form" (submit)="sendEmail($event)" class="space-y-6">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <!-- Name and Email -->
       <div>
-        <label for="name" class="block text-sm font-medium text-gray-700">Imię i nazwisko *</label>
+        <label for="user_name" class="block text-sm font-medium text-gray-700">Imię i Nazwisko *</label>
         <input
-          formControlName="name"
+          formControlName="user_name"
           type="text"
-          id="name"
-          name="name"
+          id="user_name"
+          name="user_name"
           required
           class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange focus:ring-orange sm:text-sm"
           placeholder="Jan Kowalski"/>
+          <div *ngIf="form.get('user_name')?.errors?.['required'] && form.get('user_name')?.touched" class="text-red-500">
+            Wymagane imię i nazwisko.
+          </div>
+          <div *ngIf="form.get('user_name')?.errors?.['minlength'] && form.get('user_name')?.touched" class="text-red-500">
+            Wpisz min. 3 znaki.
+          </div>
+          <div *ngIf="form.get('user_name')?.errors?.['pattern'] && form.get('user_name')?.touched" class="text-red-500">
+            Podaj imię i nazwisko.
+          </div>
+          
       </div>
       <div>
-        <label for="email" class="block text-sm font-medium text-gray-700">E-mail *</label>
+        <label for="user_email" class="block text-sm font-medium text-gray-700">Adres e-mail *</label>
         <input
-          formControlName="email"
+          formControlName="user_email"
           type="email"
-          id="email"
-          name="email"
+          id="user_email"
+          name="user_email"
           required
           class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange focus:ring-orange sm:text-sm"
           placeholder="jan@example.com"/>
+          <div *ngIf="form.get('user_email')?.errors?.['required'] && form.get('user_email')?.touched" class="text-red-500">
+            Wymagany adres email.
+          </div>
+          <div *ngIf="form.get('user_email')?.errors?.['user_email'] && form.get('user_email')?.touched" class="text-red-500">
+            Wprowadź poprawny email.
+          </div>
       </div>
 
       <!-- Phone and Construction Address -->
       <div>
         <label for="phone" class="block text-sm font-medium text-gray-700"
-          >Telefon *</label
-        >
+          >Kontakt telefoniczny *</label>
         <input
           formControlName="phone"
           type="tel"
@@ -67,9 +80,15 @@
           required
           class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange focus:ring-orange sm:text-sm"
           placeholder="123 456 789"/>
+          <div *ngIf="form.get('phone')?.errors?.['required'] && form.get('phone')?.touched" class="text-red-500">
+            Wymagany numer telefonu.
+          </div>
+          <div *ngIf="form.get('phone')?.errors?.['minlength'] && form.get('phone')?.touched" class="text-red-500">
+            Wymagane min. 6 cyfr.
+          </div>
       </div>
       <div>
-        <label for="address" class="block text-sm font-medium text-gray-700">Adres Budowy *</label>
+        <label for="address" class="block text-sm font-medium text-gray-700">Miejsce Budowy *</label>
         <input
           formControlName="address"
           type="text"
@@ -79,12 +98,18 @@
           class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange focus:ring-orange sm:text-sm"
           placeholder="ul. Budowlana 1, 00-000 Miastowo"/>
       </div>
+      <div *ngIf="form.get('address')?.errors?.['required'] && form.get('address')?.touched" class="text-red-500">
+        Wymagany adres.
+      </div>
+      <div *ngIf="form.get('address')?.errors?.['minlength'] && form.get('address')?.touched" class="text-red-500">
+        Wpisz min. 10 znaków.
+      </div>
 
       <!-- Project Name and Foundation Area -->
       <div class="md:col-span-2">
         <label
           for="project"
-          class="block text-sm font-medium text-gray-700">Nazwa projektu *</label>
+          class="block text-sm font-medium text-gray-700">Nazwa Inwestycji *</label>
         <input
           formControlName="project"
           type="text"
@@ -92,7 +117,13 @@
           name="project"
           required
           class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange focus:ring-orange sm:text-sm"
-          placeholder="Projekt Domu"/>
+          placeholder="Np. Projekt Domu"/>
+          <div *ngIf="form.get('project')?.errors?.['required'] && form.get('project')?.touched" class="text-red-500">
+            Wymagana nazwa projektu.
+          </div>
+          <div *ngIf="form.get('project')?.errors?.['minlength'] && form.get('project')?.touched" class="text-red-500">
+            Wpisz min. 3 znaki.
+          </div>
       </div>
       <div>
         <label
@@ -109,6 +140,19 @@
           step="0.01"
           class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange focus:ring-orange sm:text-sm"
           placeholder="np. 120.5"/>
+      </div>
+      <div *ngIf="form.get('area')?.errors?.['required'] && form.get('area')?.touched" class="text-red-500">
+        Wymagana powierzchnia.
+      </div>
+    
+      <!-- Min Validation Message -->
+      <div *ngIf="form.get('area')?.errors?.['min'] && form.get('area')?.touched" class="text-red-500">
+        Wpisz numer.
+      </div>
+    
+      <!-- Pattern Validation Message -->
+      <div *ngIf="(form.get('area')?.errors?.['min'] || form.get('area')?.errors?.['pattern']) && form.get('area')?.touched" class="text-red-500">
+        Podaj właściwy numer.
       </div>
 
       <!-- Voivodeship -->
@@ -138,11 +182,14 @@
           <option value="Małopolskie">Małopolskie</option>
           <option value="Podkarpackie">Podkarpackie</option>
         </select>
+        <div *ngIf="form.get('voivodeship')?.errors?.['required'] && form.get('voivodeship')?.touched" class="text-red-500">
+            Wymagany wybór.
+          </div>
       </div>
     </div>
 
     <div>
-      <label for="storey" class="block text-sm font-medium text-gray-700">Kondygnacja *</label>
+      <label for="storey" class="block text-sm font-medium text-gray-700">Ilość pięter *</label>
       <select
         formControlName="storey"
         id="storey"
@@ -153,9 +200,13 @@
         <option value="Parter i poddasze">Parter i poddasze</option>
         <option value="Dwa piętra">Dwa piętra</option>
         <option value="Więcej niż dwa piętra">Więcej niż dwa piętra</option>
+        <option value="Inna">Inna</option>
       </select>
+      <div *ngIf="form.get('storey')?.errors?.['required'] && form.get('storey')?.touched" class="text-red-500">
+        Wymagany wybór.
+       </div>
     </div>
-
+<!-- 
     <div>
       <label for="roof" class="block text-sm font-medium text-gray-700">Dach *</label>
       <select
@@ -166,11 +217,15 @@
         <option value="">Wybierz...</option>
         <option value="Śkośny">Skośny</option>
         <option value="Płaski">Płaski</option>
+        <option value="Płaski">Inny</option>
       </select>
-    </div>
+      <div *ngIf="form.get('roof')?.errors?.['required'] && form.get('roof')?.touched" class="text-red-500">
+        Wymagany wybór.
+       </div>
+    </div> -->
 
     <div>
-      <label for="geology" class="block text-sm font-medium text-gray-700">Badania geologiczne *</label>
+      <label for="geology" class="block text-sm font-medium text-gray-700">Badania gruntu *</label>
       <select
       formControlName="geology"
         id="geology"
@@ -180,6 +235,9 @@
         <option value="Tak mam">Tak mam</option>
         <option value="Nie mam">Nie mam</option>
       </select>
+      <div *ngIf="form.get('geology')?.errors?.['required'] && form.get('geology')?.touched" class="text-red-500">
+        Wymagany wybór.
+       </div>
     </div>
 
     <div>
@@ -193,6 +251,13 @@
         name="start"
         class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange focus:ring-orange sm:text-sm"/>
     </div>
+    <div *ngIf="form.get('start')?.errors?.['required'] && form.get('start')?.touched" class="text-red-500">
+        Wymagany wybór.
+    </div>
+    <div *ngIf="form.get('start')?.errors?.['pastDate'] && form.get('start')?.touched" class="text-red-500">
+        Data nie może być przeszła.
+    </div>
+    
     <div>
       <label
         for="comments"
@@ -204,6 +269,10 @@
         rows="4"
         class="mt-1 block w-full rounded-md border-grey shadow-sm focus:border-orange focus:ring-orange sm:text-sm"
         placeholder="(Opcjonalnie) Wpisz tutaj swoje uwagi lub komentarze..."></textarea>
+        <div *ngIf="form.get('comments')?.errors?.['maxlength'] && form.get('comments')?.touched" class="text-red-500">
+            Komentarz może mieć max. 1500 znaków.
+          </div>
+          
     </div>
     <div class="mt-4">
       <label class="inline-flex items-center">
@@ -214,14 +283,11 @@
           name="consent"
           class="rounded border-grey text-orange shadow-sm focus:border-orange focus:ring focus:ring-orange focus:ring-opacity-50"
           required/>
-        <span class="ml-2 text-sm text-gray-600">Oświadczam niniejszym, że jestem potencjalnym klientem z zamiarem
-          budowy, aktualnie budującym lub sondującym rynek w celu zdobycia
-          danych o kosztach związanych z budową domu.
-          Jednocześnie wyrażam zgodę na przetwarzanie moich danych osobowych w
-          celach marketingowych, także na otrzymywanie informacji handlowych od
-          właściciela strony Solid Base zgodnie z ustawą z dnia 29 sierpnia 1997
-          r. o ochronie danych osobowych (Dz. U.Nr 133. poz. 883).</span>
+        <span class="ml-2 text-sm text-gray-600">* Niniejszym oświadczam, że jako osoba zainteresowana budową domu – czy to w fazie planowania, obecnie realizująca projekt budowlany, bądź też poszukująca informacji na temat przewidywanych kosztów – zgadzam się na przetwarzanie moich danych osobowych dla potrzeb działań marketingowych. Wyrażam również zgodę na odbieranie komunikatów handlowych od firmy Solid Base, zgodnie z przepisami ustawy z 29 sierpnia 1997 roku dotyczącej ochrony danych osobowych (Dziennik Ustaw Nr 133, poz. 883).</span>
       </label>
+      <div *ngIf="form.get('consent')?.errors?.['required'] && form.get('consent')?.touched" class="text-red-500">
+        Wymagana zgoda.
+      </div>
     </div>
 
     <div>
@@ -231,5 +297,9 @@
         Wyślij
       </button>
     </div>
+    <div *ngIf="isFormSubmittedSuccessfully" class="text-center mt-4 text-green-600 font-bold">
+      Formularz wysłany, dziękujemy!
+    </div>
+    
   </form>
 </div>
