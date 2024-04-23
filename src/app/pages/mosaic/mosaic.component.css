@@ -1,0 +1,16 @@
+.grid-container {
+    background-image: url("/assets/pexels-pixabay-7931.jpg");
+    background-size:cover;
+    height: 900px;
+  }
+
+.hover-col {
+    background-color: transparent;
+    text-align: center;
+    transition: background-color 0.5s ease-in-out;
+   
+}
+
+.hover-col:hover {
+    background-color: #f8f5f1e0;
+}

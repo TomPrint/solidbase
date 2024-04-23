@@ -15,7 +15,8 @@ import { CarouselComponent } from './shared/carousel/carousel.component';
 import { OurWorkComponent } from './pages/our-work/our-work.component';
 import { PricingComponent } from './pages/pricing/pricing.component';
 import { OfferComponent } from './pages/offer/offer.component';
-import { ReactiveFormsModule } from '@angular/forms'
+import { ReactiveFormsModule } from '@angular/forms';
+import { MosaicComponent } from './pages/mosaic/mosaic.component'
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ReactiveFormsModule } from '@angular/forms'
     CarouselComponent,
     OurWorkComponent,
     PricingComponent,
-    OfferComponent
+    OfferComponent,
+    MosaicComponent
   ],
   imports: [
     BrowserModule,
