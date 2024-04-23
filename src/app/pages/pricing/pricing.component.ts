@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ValidatorsService } from 'src/app/services/validators.service';
-import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
-import { environment } from 'src/environment';
+// import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
+// import { environment } from 'src/environment';
 
 
 
@@ -35,28 +35,28 @@ export class PricingComponent implements OnInit {
     });
   }
 
-  sendEmail(e: Event) {
-    e.preventDefault();
-    if (this.form.valid) {
-      emailjs.sendForm(environment.SERVICE, environment.TEMPLATE, e.target as HTMLFormElement, environment.PUBLIC)
-      .then(() => {
-          console.log('SUCCESS!');
-          this.isFormSubmittedSuccessfully = true; // Show success message
-          this.form.reset(); // Reset the form fields
+//   sendEmail(e: Event) {
+//     e.preventDefault();
+//     if (this.form.valid) {
+//       emailjs.sendForm(environment.SERVICE, environment.TEMPLATE, e.target as HTMLFormElement, environment.PUBLIC)
+//       .then(() => {
+//           console.log('SUCCESS!');
+//           this.isFormSubmittedSuccessfully = true; // Show success message
+//           this.form.reset(); // Reset the form fields
   
           
-          setTimeout(() => {
-            this.isFormSubmittedSuccessfully = false;
-          }, 3000);
+//           setTimeout(() => {
+//             this.isFormSubmittedSuccessfully = false;
+//           }, 3000);
   
-        },
-        (error) => {
-          console.log('FAILED...', (error as EmailJSResponseStatus).text);
-        });
-    } else {
-      console.error('Form is not valid');
-      this.formErrorMessage = "Formularz posiada błędy, popraw je.";
-      this.form.markAllAsTouched();
-    }
-  }
+//         },
+//         (error:any) => {
+//           console.log('FAILED...', (error as EmailJSResponseStatus).text);
+//         });
+//     } else {
+//       console.error('Form is not valid');
+//       this.formErrorMessage = "Formularz posiada błędy, popraw je.";
+//       this.form.markAllAsTouched();
+//     }
+//   }
 }
