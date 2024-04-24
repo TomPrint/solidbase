@@ -1,7 +1,52 @@
 
-<!-- TEXT UNDER CAROUSEL -->
-<section class="bg-black w-full pt-4 px-4 pb-4 lg:pt-[55px]" data-aos="fade-up" data-aos-offset="200" data-aos-delay="50">
-  <div class="container mx-auto">
+
+<!-- YOUR VISION OUR PASSION COMPONENT -->
+<div class="vision-container container mx-auto justify-center items-center p-[5%] ">
+   <p class="poppins-medium md:text-8xl text-3xl text-[#FA5B07] p-5">TWOJA WIZJA</p>
+    <p class="poppins-medium md:text-8xl text-3xl text-[#FA5B07] p-5 flex items-center">NASZA
+        <img class="px-5 h-[100px]" src="/assets/our_passion.png">REALIZACJA
+    </p>
+</div>
+
+<!-- APP MOSAIC -->
+<app-mosaic></app-mosaic>
+
+<!-- 2 COLS -->
+<div class="grid grid-cols-2 gap-4 py-2">
+  <!-- COL L -->
+  <div class="relative">
+    <p class="ml-[16%] md:text-2xl poppins-medium text-[#E47D49]">Nasza firma:</p>
+    <br>
+    <br>
+    <p class="md:text-6xl font-bold poppins-medium text-center text-[#FA5B07]">SOLIDBASE</p>
+    <br>
+    <br>
+    <p class="py-7 ml-[14%] px-5 md:text-2xl font-light poppins-medium text-left text-[#14171A]">
+      Główne miejsce docelowe dla najwyższej jakości płyt w branży budowlanej.
+    </p>
+    <p class="py-7 ml-[14%] px-5 md:text-2xl font-light poppins-medium text-left text-[#14171A]">
+      Jako wiodący producent, jesteśmy dumni z dostarczania trwałych, niezawodnych i precyzyjnie zaprojektowanych
+      płyt betonowych dostosowanych do wymagań Twoich projektów. 
+    </p>
+    <p class="py-7 ml-[14%] px-5 md:text-2xl font-light poppins-medium text-left text-[#14171A]">
+      Dzięki zaangażowaniu w innowacje i doskonałość, nasza firma jest kamieniem węgielnym dla
+      fundamentów o niezrównanej wytrzymałości i odporności.
+    </p>
+    <p class="indent-5 py-7 ml-[14%] px-5 md:text-2xl font-normal poppins-medium text-center text-[#14171A]">
+      Poznaj naszą ofertę płyt i doświadcz solidności i precyzji, które definiują nas! 
+    </p>
+    <div class="text-center py-10">
+      <button class="py-3 px-8 text-white md:text-2xl rounded-full bg-[#FA5B07] md:border-0 poppins-medium" [routerLink]="['/contact']">Kontakt</button>
+    </div>
+  </div>
+  <!-- COL R-->
+  <div class="relative">
+    <div class="absolute inset-5 bg-cover bg-center" style="background-image: url('/assets/pixelcut-export 1.png');"></div>
+  </div>
+</div>
+
+<!-- <section class="bg-black w-full pt-4 px-4 pb-4 lg:pt-[55px]" data-aos="fade-up" data-aos-offset="200" data-aos-delay="50"> -->
+  <!-- <div class="container mx-auto">
     <div class="pb-10">
       <h1 class="text-orange text-xl">O NASZEJ FIRMIE:</h1>
       <p class="text-white pb-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
@@ -11,13 +56,13 @@
         essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing 
         Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including 
         versions of Lorem Ipsum.</p>
-    </div>
+    </div> -->
 
     <!--CARDS SECTION  -->
      <div class="flex flex-wrap mx-1" >
 
         <!-- FIRST CARD -->
-        <div class="w-full px-3 md:w-1/2 xl:w-1/3" data-aos="fade-left" data-aos-offset="200"data-aos-delay="50">
+        <!-- <div class="w-full px-3 md:w-1/2 xl:w-1/3" data-aos="fade-left" data-aos-offset="200"data-aos-delay="50">
            <div class="mb-10 overflow-hidden duration-300 bg-brown rounded-lg shadow-2xl shadow-gray-900">
               <img
                  src="https://images.pexels.com/photos/2768398/pexels-photo-2768398.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
@@ -37,10 +82,10 @@
                  <button class="bg-black hover:text-orange  text-white font-bold py-2 px-4 rounded-full transition duration-200">View Details</button>
               </div>
            </div>
-        </div>
+        </div> -->
 
         <!-- SECOND CARD -->
-        <div class="w-full px-3 md:w-1/2 xl:w-1/3" data-aos="fade-left" data-aos-offset="200"data-aos-delay="50">
+        <!-- <div class="w-full px-3 md:w-1/2 xl:w-1/3" data-aos="fade-left" data-aos-offset="200"data-aos-delay="50">
           <div class="mb-10 overflow-hidden duration-300 bg-brown rounded-lg shadow-2xl shadow-gray-900">
              <img
                 src="https://images.pexels.com/photos/2768398/pexels-photo-2768398.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
@@ -60,10 +105,10 @@
                 <button class="bg-black hover:text-orange  text-white font-bold py-2 px-4 rounded-full transition duration-200">View Details</button>
              </div>
           </div>
-       </div>
+       </div> -->
 
         <!-- THIRD CARD -->
-        <div class="w-full px-3 md:w-1/2 xl:w-1/3" data-aos="fade-left" data-aos-offset="200"data-aos-delay="50">
+        <!-- <div class="w-full px-3 md:w-1/2 xl:w-1/3" data-aos="fade-left" data-aos-offset="200"data-aos-delay="50">
           <div class="mb-10 overflow-hidden duration-300 bg-brown rounded-lg shadow-2xl shadow-gray-900">
              <img
                 src="https://images.pexels.com/photos/2768398/pexels-photo-2768398.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
@@ -83,14 +128,14 @@
                 <button class="bg-black hover:text-orange  text-white font-bold py-2 px-4 rounded-full transition duration-200">View Details</button>
              </div>
           </div>
-       </div> 
+       </div>  -->
 
     </div>
-  </div>
-</section>
+  <!-- </div> -->
+<!-- </section> -->
 
 <!-- PROMO TEXT SECTION -->
-<section class="flex justify-center bg-whte pt-10 px-4 pb-10 lg:pt-[70px] lg:pb-20 drop-shadow-md" data-aos="fade-up" data-aos-offset="200" data-aos-delay="50">
+<!-- <section class="flex justify-center bg-whte pt-10 px-4 pb-10 lg:pt-[70px] lg:pb-20 drop-shadow-md" data-aos="fade-up" data-aos-offset="200" data-aos-delay="50">
     <div class="container mx-auto">
       <div>
         <h1 class="text-orange">TO CO NAS WYRÓŻNIA ...</h1>
@@ -108,31 +153,37 @@
         </p>
       </div>
     </div>
-</section>
+</section> -->
+
+
+
+
+
+
 
 <!-- CONTACT SECTION -->
-<section class="bg-orange pt-3 px-4 pb-5 lg:pt-[30px] lg:pb-6" data-aos="fade-up" data-aos-offset="200" data-aos-delay="50">
-   <div class="container mx-auto">
+<!-- <section class="bg-orange pt-3 px-4 pb-5 lg:pt-[30px] lg:pb-6" data-aos="fade-up" data-aos-offset="200" data-aos-delay="50"> -->
+   <!-- <div class="container mx-auto"> -->
      <!-- 2 COL FELX -->
-      <div class="flex flex-col lg:flex-row items-center justify-between">
+      <!-- <div class="flex flex-col lg:flex-row items-center justify-between"> -->
        <!-- FIRST COL -->
-        <div class="w-full lg:w-2/3 lg:pr-8">
+        <!-- <div class="w-full lg:w-2/3 lg:pr-8">
          <h1 class="text-white text-2xl lg:text-3xl font-bold mb-2">Masz Pytania?</h1>
          <p class="text-white mb-6 lg:text-lg">Jeśli nie wiesz czy nasza oferta jest dla Ciebie, czy zwyczajnie masz jakiekolwiek pytania dotyczące współpracy z nami, zadzwoń lub napisz do nas i postaramy się odpowiedzieć na każde zadane pytanie.</p>
-        </div>
+        </div> -->
       <!-- SECOND COL -->
-        <div>
+        <!-- <div>
           <a href="/contact" class="inline-block px-6 py-6 bg-white text-xl text-orange font-semibold rounded-md hover:text-white hover:bg-black transition duration-200 shadow-lg">
               Skontaktuj się z nami teraz
           </a>
-        </div>
+        </div> -->
       
-     </div>
-   </div>
-</section>
+     <!-- </div> -->
+   <!-- </div> -->
+<!-- </section> -->
  
  <!-- SECTION STEP BY STEP -->
- <section id="works" class="relative bg-brown py-10 sm:py-16 lg:py-24" data-aos="fade-up" data-aos-offset="200" data-aos-delay="50">
+ <!-- <section id="works" class="relative bg-brown py-10 sm:py-16 lg:py-24" data-aos="fade-up" data-aos-offset="200" data-aos-delay="50">
    <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
        <div class="max-w-2xl mx-auto text-center">
            <h2 class="text-4xl text-white font-extrabold mx-auto md:text-6xl lg:text-5xl">Jak to działa?</h2>
@@ -181,11 +232,11 @@
    <div class="absolute inset-0 m-auto max-w-xs h-[357px] blur-[118px] sm:max-w-md md:max-w-lg"
        style="background:radial-gradient(1.89deg, rgba(34, 78, 95, 0.4) -1000%, rgba(191, 227, 205, 0.26) 1500.74%, rgba(34, 140, 165, 0.41) 56.49%, rgba(28, 47, 99, 0.11) 1150.91%)">
    </div>
-</section>
+</section> -->
 
 
  <!-- SECTION STATISTICS -->
-<section data-aos="fade-up" data-aos-offset="200" data-aos-delay="50">
+<!-- <section data-aos="fade-up" data-aos-offset="200" data-aos-delay="50">
 <div class="bg-black py-24 sm:py-32">
    <div class="mx-auto max-w-7xl px-6 lg:px-8">
      <div class="mx-auto max-w-2xl lg:max-w-none">
@@ -215,10 +266,10 @@
      </div>
    </div>
  </div>
-</section>
+</section> -->
 
  <!-- SECTION PARTNERS -->
-   <section class="mb-8 text-center" data-aos="fade-up" data-aos-offset="200" data-aos-delay="50">
+   <!-- <section class="mb-8 text-center" data-aos="fade-up" data-aos-offset="200" data-aos-delay="50">
       <div class="container">
      <div class="py-12 md:px-12">
        <div class="container mx-auto xl:px-32">
@@ -262,5 +313,5 @@
        </div>
      </div>
    </div>
-   </section>
+   </section> -->
 

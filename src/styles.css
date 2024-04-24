@@ -19,7 +19,9 @@
     --background-color: #A7A49D;
 }
 
-
+.poppins-medium {
+    font-family: "Poppins", sans-serif;
+  }
 
 .black{
     color: var(--primary-color);
