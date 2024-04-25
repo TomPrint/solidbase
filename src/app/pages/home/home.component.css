@@ -1,3 +1,9 @@
+.vision-container {
+  background-image: url("/assets/Railways-Road-slab 1.png");
+  background-size:cover;
+  height: 500px;
+}
+
 .container {
     overflow-x: hidden;
     
