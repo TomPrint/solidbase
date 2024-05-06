@@ -15,35 +15,42 @@
 <div class="grid grid-cols-2 gap-4 py-2">
   <!-- COL L -->
   <div class="relative">
-    <p class="ml-[16%] md:text-2xl poppins-medium text-[#E47D49]">Nasza firma:</p>
-    <br>
-    <br>
-    <p class="md:text-6xl font-bold poppins-medium text-center text-[#FA5B07]">SOLIDBASE</p>
-    <br>
-    <br>
-    <p class="py-7 ml-[14%] px-5 md:text-2xl font-light poppins-medium text-left text-[#14171A]">
+    <p class="ml-[16%] md:text-2xl poppins-light text-[#E47D49]">Nasza firma:</p>
+    <br><br>
+    <p class="md:text-6xl font-bold poppins-light text-center text-[#FA5B07]">SOLIDBASE</p>
+    <br><br>
+    <p class="py-7 ml-[14%] px-5 md:text-2xl font-light poppins-light text-left text-[#14171A]">
       Główne miejsce docelowe dla najwyższej jakości płyt w branży budowlanej.
     </p>
-    <p class="py-7 ml-[14%] px-5 md:text-2xl font-light poppins-medium text-left text-[#14171A]">
+    <p class="py-7 ml-[14%] px-5 md:text-2xl font-light poppins-light text-left text-[#14171A]">
       Jako wiodący producent, jesteśmy dumni z dostarczania trwałych, niezawodnych i precyzyjnie zaprojektowanych
-      płyt betonowych dostosowanych do wymagań Twoich projektów. 
+      płyt betonowych dostosowanych do wymagań Twoich projektów.
     </p>
-    <p class="py-7 ml-[14%] px-5 md:text-2xl font-light poppins-medium text-left text-[#14171A]">
+    <p class="py-7 ml-[14%] px-5 md:text-2xl font-light poppins-light text-left text-[#14171A]">
       Dzięki zaangażowaniu w innowacje i doskonałość, nasza firma jest kamieniem węgielnym dla
       fundamentów o niezrównanej wytrzymałości i odporności.
     </p>
-    <p class="indent-5 py-7 ml-[14%] px-5 md:text-2xl font-normal poppins-medium text-center text-[#14171A]">
-      Poznaj naszą ofertę płyt i doświadcz solidności i precyzji, które definiują nas! 
+    <p class="indent-5 py-7 ml-[14%] px-5 md:text-2xl font-normal poppins-light text-center text-[#14171A]">
+      Poznaj naszą ofertę płyt i doświadcz solidności i precyzji, które definiują nas!
     </p>
     <div class="text-center py-10">
       <button class="py-3 px-8 text-white md:text-2xl rounded-full bg-[#FA5B07] md:border-0 poppins-medium" [routerLink]="['/contact']">Kontakt</button>
     </div>
   </div>
-  <!-- COL R-->
-  <div class="relative">
+
+  <!-- COL R -->
+  <div class="relative overflow-hidden">
     <div class="absolute inset-5 bg-cover bg-center" style="background-image: url('/assets/pixelcut-export 1.png');"></div>
+    <!-- Diagonal Background -->
+    <div class="absolute bottom-0 left-2/4 w-full h-full transform origin-bottom-left skew-x-[-12deg] bg-[#14171A] border-l border-[#FA5B07]"></div>
+    <!-- Text in the Right Bottom Corner -->
+    <div class="absolute bottom-4 right-4 text-right text-white">
+      <p class="text-4xl font-bold text-[#FA5B07]">SOLIDBASE</p>
+      <p class="text-lg mt-1 font-semibold text-[#FA5B07]">Solidność | Jakość | Zaufanie</p>
+    </div>
   </div>
 </div>
+
 
 <!-- <section class="bg-black w-full pt-4 px-4 pb-4 lg:pt-[55px]" data-aos="fade-up" data-aos-offset="200" data-aos-delay="50"> -->
   <!-- <div class="container mx-auto">
@@ -236,37 +243,65 @@
 
 
  <!-- SECTION STATISTICS -->
-<!-- <section data-aos="fade-up" data-aos-offset="200" data-aos-delay="50">
-<div class="bg-black py-24 sm:py-32">
-   <div class="mx-auto max-w-7xl px-6 lg:px-8">
-     <div class="mx-auto max-w-2xl lg:max-w-none">
-       <div class="text-center space-y-4">
-         <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Nasze statystyki</h2>
-         <p class="text-lg leading-8 text-grey">Nasze wyniki mówią same za siebie, przekonaj się.
-         </p>
-       </div>
-       <dl class="mt-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4">
-         <div class="flex flex-col bg-white/5 p-8">
-           <dt class="text-sm font-semibold leading-6 text-grey">Wylanego Betonu</dt>
-           <dd class="order-first text-3xl font-semibold tracking-tight text-white">2000m3</dd>
-         </div>
-         <div class="flex flex-col bg-white/5 p-8">
-           <dt class="text-sm font-semibold leading-6 text-grey">Zrealizowanych projektów</dt>
-           <dd class="order-first text-3xl font-semibold tracking-tight text-white">30</dd>
-         </div>
-         <div class="flex flex-col bg-white/5 p-8">
-           <dt class="text-sm font-semibold leading-6 text-grey">Lokalizacji</dt>
-           <dd class="order-first text-3xl font-semibold tracking-tight text-white">23</dd>
-         </div>
-         <div class="flex flex-col bg-white/5 p-8">
-           <dt class="text-sm font-semibold leading-6 text-grey">Powierzchni</dt>
-           <dd class="order-first text-3xl font-semibold tracking-tight text-white">6000m2</dd>
-         </div>
-       </dl>
-     </div>
-   </div>
- </div>
-</section> -->
+ <!-- <section data-aos="fade-up" data-aos-offset="200" data-aos-delay="50"> -->
+  <section class="border-t border-[#FA5B07]">
+  <div class="bg-[#14171A] py-24 sm:py-32">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl lg:max-w-none">
+        <dl class="mt-16 grid grid-cols-1 gap-4 overflow-hidden text-center sm:grid-cols-2 lg:grid-cols-4">
+
+          <!-- Stat Item 1 -->
+          <div class="relative flex justify-center h-full px-2">
+            <!-- Outer Border -->
+            <div class="absolute inset-0 border border-[#FA5B07] rounded-md w-[99%]"></div>
+            <!-- Inner Border -->
+            <div class="relative flex flex-col items-center justify-center border border-[#FA5B07] rounded-lg bg-[#14171A] w-[99%] px-3 py-4">
+              <dd class="text-3xl font-semibold tracking-tight puritan-bold text-[#FA5B07]">2000m3</dd>
+              <dt class="mt-2 text-sm font-light poppins-medium  leading-6 text-[#CECFCF]">Wylanego Betonu</dt>
+            </div>
+          </div>
+
+          <!-- Stat Item 2 -->
+          <div class="relative flex justify-center h-full px-2">
+            <!-- Outer Border -->
+            <div class="absolute inset-0 border border-[#FA5B07] rounded-md w-[99%]"></div>
+            <!-- Inner Border -->
+            <div class="relative flex flex-col items-center justify-center border border-[#FA5B07] rounded-lg bg-[#14171A] w-[99%] px-3 py-4">
+              <dd class="text-3xl font-semibold tracking-tight  puritan-bold text-[#FA5B07]">30+</dd>
+              <dt class="mt-2 text-sm font-light poppins-medium  leading-6 text-[#CECFCF]">Zrealizowanych projektów</dt>
+            </div>
+          </div>
+
+          <!-- Stat Item 3 -->
+          <div class="relative flex justify-center h-full px-2">
+            <!-- Outer Border -->
+            <div class="absolute inset-0 border border-[#FA5B07] rounded-md w-[99%]"></div>
+            <!-- Inner Border -->
+            <div class="relative flex flex-col items-center justify-center border border-[#FA5B07] rounded-lg bg-[#14171A] w-[99%] px-3 py-2">
+              <dd class="text-3xl font-semibold tracking-tight puritan-bold text-[#FA5B07]">6000m2</dd>
+              <dt class="mt-2 text-sm font-light poppins-medium  leading-6 text-[#CECFCF]">Powierzchni</dt>
+            </div>
+          </div>
+
+          <!-- Stat Item 4 -->
+          <div class="relative flex justify-center h-full px-2">
+            <!-- Outer Border -->
+            <div class="absolute inset-0 border border-[#FA5B07] rounded-md w-[99%]"></div>
+            <!-- Inner Border -->
+            <div class="relative flex flex-col items-center justify-center border border-[#FA5B07] rounded-lg bg-[#14171A] w-[99%] px-3 py-4">
+              <dd class="text-3xl font-semibold tracking-tight puritan-bold text-[#FA5B07]">23+</dd>
+              <dt class="mt-2 text-sm font-light poppins-medium leading-6 text-[#CECFCF]">Lokalizacji</dt>
+            </div>
+          </div>
+
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
 
  <!-- SECTION PARTNERS -->
    <!-- <section class="mb-8 text-center" data-aos="fade-up" data-aos-offset="200" data-aos-delay="50">
