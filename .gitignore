@@ -1,4 +1,23 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
+# Dependency directories
+node_modules/
+
+# Angular build output
+/dist/
+
+# Firebase build output
+/.firebase/
+/public/
+
+# TypeScript compiled files
+/**/*.js
+/**/*.js.map
+
+# Environment files
+.env
+
+
+
 
 \environment.ts
 # Compiled output
