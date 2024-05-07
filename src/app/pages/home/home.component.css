@@ -8,6 +8,12 @@
     overflow-x: hidden;
     
   }
+
+  .outlined-text {
+    -webkit-text-stroke: 2px #FA5B07; /* specify the width and color of the outline */
+    color: transparent; /* make the text color transparent */
+    font-weight: bold; /* ensure the font is bold to make the outline more visible */
+  }
   
 
   

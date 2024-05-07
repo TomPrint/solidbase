@@ -12,7 +12,7 @@
 <app-mosaic></app-mosaic>
 
 <!-- 2 COLS -->
-<div class="grid grid-cols-2 gap-4 py-2">
+<div class="grid grid-cols-2 gap-4 mt-5">
   <!-- COL L -->
   <div class="relative">
     <p class="ml-[16%] md:text-2xl poppins-light text-[#E47D49]">Nasza firma:</p>
@@ -36,20 +36,36 @@
     <div class="text-center py-10">
       <button class="py-3 px-8 text-white md:text-2xl rounded-full bg-[#FA5B07] md:border-0 poppins-medium" [routerLink]="['/contact']">Kontakt</button>
     </div>
+    <!-- SVG Border at the bottom left half -->
+    <svg class="absolute bottom-0 left-0" style="width: 130%; height: 2.2px;" viewBox="0 0 50 1" preserveAspectRatio="none">
+      <line x1="0" y1="0" x2="50" y2="0" stroke="#FA5B07" stroke-width="2"/>
+    </svg>
   </div>
 
-  <!-- COL R -->
-  <div class="relative overflow-hidden">
-    <div class="absolute inset-5 bg-cover bg-center" style="background-image: url('/assets/pixelcut-export 1.png');"></div>
-    <!-- Diagonal Background -->
-    <div class="absolute bottom-0 left-2/4 w-full h-full transform origin-bottom-left skew-x-[-12deg] bg-[#14171A] border-l border-[#FA5B07]"></div>
-    <!-- Text in the Right Bottom Corner -->
-    <div class="absolute bottom-4 right-4 text-right text-white">
-      <p class="text-4xl font-bold text-[#FA5B07]">SOLIDBASE</p>
-      <p class="text-lg mt-1 font-semibold text-[#FA5B07]">Solidność | Jakość | Zaufanie</p>
-    </div>
+<!-- COL R -->
+<div class="relative overflow-hidden">
+  <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('/assets/pixelcut-export 1.png');"></div>
+  <!-- Trapezoidal Background -->
+  <div class="absolute bottom-0 left-1/2 w-full h-32 bg-[#14171A]" style="clip-path: polygon(0 100%, 18% 0%, 100% 0%, 100% 100%); transform: translateX(-50%);">
+    <!-- SVG Border -->
+    <svg class="absolute bottom-0 left-0 w-full h-32" viewBox="0 0 100 32" preserveAspectRatio="none">
+      <path d="M0,32 L18,0 L100,0" fill="transparent" stroke="#FA5B07" stroke-width="0.6"/>
+      <line x1="0" y1="32" x2="0" y2="0" stroke="#FA5B07" stroke-width="0.6"/> <!-- Vertical line from bottom left to top left -->
+    </svg>
+  </div>
+  <!-- Text in the Right Bottom Corner -->
+  <div class="absolute bottom-4 right-4 text-right text-white">
+    <p class="text-4xl poppins-bold outlined-text">SOLIDBASE</p>
+
+    <p class="text-lg mt-1 poppins-bold text-[#FA5B07]">Solidność | Jakość | Zaufanie</p>
   </div>
 </div>
+
+
+
+</div>
+
+
 
 
 <!-- <section class="bg-black w-full pt-4 px-4 pb-4 lg:pt-[55px]" data-aos="fade-up" data-aos-offset="200" data-aos-delay="50"> -->
@@ -66,7 +82,7 @@
     </div> -->
 
     <!--CARDS SECTION  -->
-     <div class="flex flex-wrap mx-1" >
+     <!-- <div class="flex flex-wrap mx-1" > -->
 
         <!-- FIRST CARD -->
         <!-- <div class="w-full px-3 md:w-1/2 xl:w-1/3" data-aos="fade-left" data-aos-offset="200"data-aos-delay="50">
@@ -137,7 +153,7 @@
           </div>
        </div>  -->
 
-    </div>
+    <!-- </div> -->
   <!-- </div> -->
 <!-- </section> -->
 
@@ -244,7 +260,7 @@
 
  <!-- SECTION STATISTICS -->
  <!-- <section data-aos="fade-up" data-aos-offset="200" data-aos-delay="50"> -->
-  <section class="border-t border-[#FA5B07]">
+  <section class="mt-0 pt-0" >
   <div class="bg-[#14171A] py-24 sm:py-32">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="mx-auto max-w-2xl lg:max-w-none">
@@ -253,7 +269,7 @@
           <!-- Stat Item 1 -->
           <div class="relative flex justify-center h-full px-2">
             <!-- Outer Border -->
-            <div class="absolute inset-0 border border-[#FA5B07] rounded-md w-[99%]"></div>
+            <div class="absolute inset-0 border border-[#FA5B07] rounded-md w-[100%]"></div>
             <!-- Inner Border -->
             <div class="relative flex flex-col items-center justify-center border border-[#FA5B07] rounded-lg bg-[#14171A] w-[99%] px-3 py-4">
               <dd class="text-3xl font-semibold tracking-tight puritan-bold text-[#FA5B07]">2000m3</dd>
@@ -264,7 +280,7 @@
           <!-- Stat Item 2 -->
           <div class="relative flex justify-center h-full px-2">
             <!-- Outer Border -->
-            <div class="absolute inset-0 border border-[#FA5B07] rounded-md w-[99%]"></div>
+            <div class="absolute inset-0 border border-[#FA5B07] rounded-md w-[100%]"></div>
             <!-- Inner Border -->
             <div class="relative flex flex-col items-center justify-center border border-[#FA5B07] rounded-lg bg-[#14171A] w-[99%] px-3 py-4">
               <dd class="text-3xl font-semibold tracking-tight  puritan-bold text-[#FA5B07]">30+</dd>
@@ -275,7 +291,7 @@
           <!-- Stat Item 3 -->
           <div class="relative flex justify-center h-full px-2">
             <!-- Outer Border -->
-            <div class="absolute inset-0 border border-[#FA5B07] rounded-md w-[99%]"></div>
+            <div class="absolute inset-0 border border-[#FA5B07] rounded-md w-[100%]"></div>
             <!-- Inner Border -->
             <div class="relative flex flex-col items-center justify-center border border-[#FA5B07] rounded-lg bg-[#14171A] w-[99%] px-3 py-2">
               <dd class="text-3xl font-semibold tracking-tight puritan-bold text-[#FA5B07]">6000m2</dd>
@@ -286,7 +302,7 @@
           <!-- Stat Item 4 -->
           <div class="relative flex justify-center h-full px-2">
             <!-- Outer Border -->
-            <div class="absolute inset-0 border border-[#FA5B07] rounded-md w-[99%]"></div>
+            <div class="absolute inset-0 border border-[#FA5B07] rounded-md w-[100%]"></div>
             <!-- Inner Border -->
             <div class="relative flex flex-col items-center justify-center border border-[#FA5B07] rounded-lg bg-[#14171A] w-[99%] px-3 py-4">
               <dd class="text-3xl font-semibold tracking-tight puritan-bold text-[#FA5B07]">23+</dd>
