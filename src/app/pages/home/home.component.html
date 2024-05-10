@@ -44,7 +44,7 @@
 
 <!-- COL R -->
 <div class="relative overflow-hidden">
-  <div class="absolute inset-0 bg-cover bg-center border-b-2 border-[#14171A]" style="background-image: url('/assets/pixelcut-export 1.png');"></div>
+  <div class="absolute inset-0 bg-cover bg-center border-b-2 border-[#14171A]" style="background-image: url('/assets/xx1.png');"></div>
   <!-- Trapezoidal Background -->
   <div class="absolute bottom-0 left-1/2 w-full h-32 bg-[#14171A]" style="clip-path: polygon(0 100%, 18% 0%, 100% 0%, 100% 100%); transform: translateX(-50%);">
     <!-- SVG Border -->
@@ -60,7 +60,6 @@
     <p class="text-lg mt-1 poppins-bold text-[#FA5B07]">Solidność | Jakość | Zaufanie</p>
   </div>
 </div>
-
 
 
 </div>
@@ -365,4 +364,31 @@
      </div>
    </div>
    </section> -->
+
+   <section class="carousel-background">
+    <div class="relative flex flex-col items-center justify-center p-5 ">
+      <div class="flex items-center justify-between w-full max-w-screen-lg px-4">
+        <h2 class="text-xl font-bold text-[#E4CFBE]">Nasze projekty</h2>
+        
+        <!-- Horizontal line, thin and in between -->
+        <div class="flex-grow h-px bg-[#B5B5B5] mx-2"></div>
+        
+        <div>
+          <button (click)="previousImage()" class="text-[#CECFCF] p-2 mr-2">
+            <i class="fas fa-long-arrow-alt-left fa-2x"></i>
+          </button>
+          <button (click)="nextImage()" class="bg-[#FA5B07] text-[#CECFCF] p-2">
+            <i class="fas fa-long-arrow-alt-right fa-2x"></i>
+          </button>
+        </div>
+      </div>
+      <div class="flex w-full overflow-hidden mt-9 justify-center items-center" style="height: 300px;">
+        <img *ngFor="let image of displayedImages; let i = index" [src]="image"
+             [ngClass]="{'middle-image': i === 1, 'left-image': i === 0, 'right-image': i === 2}"
+             class="object-cover mx-2 image">
+      </div>
+    </div>
+  </section>
+  
+  
 

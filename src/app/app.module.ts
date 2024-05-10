@@ -16,7 +16,9 @@ import { OurWorkComponent } from './pages/our-work/our-work.component';
 import { PricingComponent } from './pages/pricing/pricing.component';
 import { OfferComponent } from './pages/offer/offer.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { MosaicComponent } from './pages/mosaic/mosaic.component'
+import { MosaicComponent } from './pages/mosaic/mosaic.component';
+
+
 
 @NgModule({
   declarations: [
@@ -38,7 +40,7 @@ import { MosaicComponent } from './pages/mosaic/mosaic.component'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

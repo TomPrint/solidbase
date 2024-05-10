@@ -8,6 +8,17 @@ import * as AOS from 'aos';
 })
 export class HomeComponent implements AfterViewInit {
 
+  currentIndex = 1;
+  images = [
+    'assets/car1.jpg',
+    'assets/car3.jpg',
+    'assets/car5.jpg',
+  ];
+
+
+
+
+
   constructor() {}
 
   ngAfterViewInit(): void {
@@ -23,5 +34,25 @@ export class HomeComponent implements AfterViewInit {
     // After the content is loaded/changed
     AOS.refresh();
   }
+
+  get displayedImages(): string[] {
+    return [
+      this.images[(this.currentIndex + this.images.length - 1) % this.images.length], // Previous image
+      this.images[this.currentIndex], // Current image
+      this.images[(this.currentIndex + 1) % this.images.length] // Next image
+    ];
+  }
+
+  nextImage() {
+    this.currentIndex = (this.currentIndex + 1) % this.images.length;
+  }
+
+  previousImage() {
+    this.currentIndex = (this.currentIndex + this.images.length - 1) % this.images.length;
+  }
 }
+
+
+
+
 
