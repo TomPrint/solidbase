@@ -366,7 +366,7 @@
    </section> -->
 
    <section class="carousel-background">
-    <div class="relative flex flex-col items-center justify-center p-5 ">
+    <div class="relative flex flex-col items-center justify-center p-1">
       <div class="flex items-center justify-between w-full max-w-screen-lg px-4">
         <h2 class="text-xl font-bold text-[#E4CFBE]">Nasze projekty</h2>
         
@@ -385,10 +385,83 @@
       <div class="flex w-full overflow-hidden mt-9 justify-center items-center" style="height: 300px;">
         <img *ngFor="let image of displayedImages; let i = index" [src]="image"
              [ngClass]="{'middle-image': i === 1, 'left-image': i === 0, 'right-image': i === 2}"
-             class="object-cover mx-2 image">
+             class="object-cover mx-1 image">
       </div>
     </div>
   </section>
+
+  <!-- New section for text and button -->
+<section class="text-button-section mt-0 p-0">
+  <p class="project-invitation">Chcesz, aby Twój projekt znalazł się wśród?</p>
+  <h2 class="submit-project">Zgłoś swój projekt już teraz!</h2>
+  <button class="submit-button">Wyceń</button>
+</section>
   
   
+<!-- Accordion Section -->
+<hr>
+<section class="flex items-center justify-center py-10 bg-[#F8F5F1]">
+  <div class="flex flex-col md:flex-row items-center max-w-6xl mx-auto">
+    <div class="md:w-1/2 p-4 relative">
+      <img src="assets/image10.png" alt="Description" class="w-full h-auto rounded-lg shadow-md">
+    </div>
+    <div class="md:w-1/2 p-4 bg-[#E4CFBE] rounded-lg shadow-md">
+      <div id="accordionExample">
+        <div class="mb-2" *ngFor="let item of accordionItems; let i = index">
+          <h2 class="mb-0">
+            <button (click)="toggleAccordion(i)"
+                    class="flex items-center w-full py-4 px-5 text-left text-[#14171A] bg-[#E4CFBE] border-0 transition focus:outline-none">
+              {{ item.title }}
+              <span class="ml-auto text-2xl text-[#14171A] poppins-medium">{{ item.isOpen ? '-' : '+' }}</span>
+            </button>
+          </h2>
+          <div [ngClass]="{ 'block': item.isOpen, 'hidden': !item.isOpen }" class="transition-all duration-300">
+            <div class="py-4 px-5 text-[#14171A] poppins-light">
+              {{ item.content }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<hr>
+
+<!-- Logo Section -->
+
+<!-- logos-section.component.html -->
+<section class="bg-[#F8F5F1] py-10">
+  <div class="container mx-auto text-center">
+    <!-- Center the Solid Base logo -->
+    <img src="assets/SB_logo.png" alt="Solid Base Logo" class="mx-auto mb-4 h-16">
+
+    <!-- Flex container for the text and button -->
+    <div class="flex justify-between items-center mb-4">
+      <p class="text-lg text-[#14171A] mb-4 flex-1 text-left">Solidność | Jakość | Zaufanie</p>
+      <div class="flex-1 text-right">
+        <p class="text-lg text-[#14171A] mb-4">Dołącz do nas!</p>
+        <a href="/contact" class="bg-[#FA5B07] text-white py-2 px-4 rounded-full inline-block">Kontakt</a>
+      </div>
+    </div>
+
+    <!-- Flex container for "Nasi partnerzy:" and logos -->
+    <div class="flex justify-between items-center mb-4">
+      <p class="text-lg text-[#FA5B07] ml-4">Nasi partnerzy:</p>
+    </div>
+
+    <!-- Flex container for the logos -->
+    <div class="flex justify-center items-center space-x-8 mt-8">
+      <img src="assets/amtech_logo.png" alt="Partner 1" class="h-16">
+      <img src="assets/urban_logo.png" alt="Partner 2" class="h-16">
+      <img src="assets/swiss_logo.png" alt="Partner 3" class="h-16">
+      <!-- Add more logos as needed -->
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
 
