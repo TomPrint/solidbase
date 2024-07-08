@@ -4,7 +4,8 @@
 <div class="vision-container container mx-auto justify-center items-center p-[5%] ">
    <p class="poppins-medium md:text-8xl text-3xl text-[#FA5B07] p-5">TWOJA WIZJA</p>
     <p class="poppins-medium md:text-8xl text-3xl text-[#FA5B07] p-5 flex items-center">NASZA
-        <img class="px-5 h-[100px]" src="/assets/our_passion.png">REALIZACJA
+        <!-- <img class="px-5 h-[100px]" src="/assets/our_passion.png"> -->
+        REALIZACJA
     </p>
 </div>
 
@@ -12,12 +13,12 @@
 <app-mosaic></app-mosaic>
 
 <!-- 2 COLS -->
-<div class="grid grid-cols-2 gap-4 mt-5">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-5">
   <!-- COL L -->
   <div class="relative">
     <p class="ml-[16%] md:text-2xl poppins-light text-[#E47D49]">Nasza firma:</p>
     <br><br>
-    <p class="md:text-6xl font-bold poppins-light text-center text-[#FA5B07]">SOLIDBASE</p>
+    <p class="text-6xl font-bold poppins-light text-center text-[#FA5B07]">SOLIDBASE</p>
     <br><br>
     <p class="py-7 ml-[14%] px-5 md:text-2xl font-light poppins-light text-left text-[#14171A]">
       Główne miejsce docelowe dla najwyższej jakości płyt w branży budowlanej.
@@ -30,7 +31,7 @@
       Dzięki zaangażowaniu w innowacje i doskonałość, nasza firma jest kamieniem węgielnym dla
       fundamentów o niezrównanej wytrzymałości i odporności.
     </p>
-    <p class="indent-5 py-7 ml-[14%] px-5 md:text-2xl font-normal poppins-light text-center text-[#14171A]">
+    <p class="py-7 ml-[14%] px-5 md:text-2xl font-normal poppins-light text-left text-[#14171A]">
       Poznaj naszą ofertę płyt i doświadcz solidności i precyzji, które definiują nas!
     </p>
     <div class="text-center py-10">
@@ -42,27 +43,26 @@
     </svg>
   </div>
 
-<!-- COL R -->
-<div class="relative overflow-hidden">
-  <div class="absolute inset-0 bg-cover bg-center border-b-2 border-[#14171A]" style="background-image: url('/assets/xx1.png');"></div>
-  <!-- Trapezoidal Background -->
-  <div class="absolute bottom-0 left-1/2 w-full h-32 bg-[#14171A]" style="clip-path: polygon(0 100%, 18% 0%, 100% 0%, 100% 100%); transform: translateX(-50%);">
-    <!-- SVG Border -->
-    <svg class="absolute bottom-0 left-0 w-full h-32" viewBox="0 0 100 32" preserveAspectRatio="none">
-      <path d="M0,32 L18,0 L100,0" fill="transparent" stroke="#FA5B07" stroke-width="0.5"/>
-      <line x1="0" y1="32" x2="0" y2="0" stroke="#FA5B07" stroke-width="0.6"/> <!-- Vertical line from bottom left to top left -->
-    </svg>
-  </div>
-  <!-- Text in the Right Bottom Corner -->
-  <div class="absolute bottom-4 right-4 text-right text-white">
-    <p class="text-4xl poppins-bold outlined-text">SOLIDBASE</p>
+  <!-- COL R -->
+  <div class="relative overflow-hidden hidden md:block">
+    <div class="absolute inset-0 bg-cover bg-center border-b-2 border-[#14171A]" style="background-image: url('/assets/xx1.png');"></div>
+    <!-- Trapezoidal Background -->
+    <div class="absolute bottom-0 left-1/2 w-full h-32 bg-[#14171A]" style="clip-path: polygon(0 100%, 18% 0%, 100% 0%, 100% 100%); transform: translateX(-50%);">
+      <!-- SVG Border -->
+      <svg class="absolute bottom-0 left-0 w-full h-32" viewBox="0 0 100 32" preserveAspectRatio="none">
+        <path d="M0,32 L18,0 L100,0" fill="transparent" stroke="#FA5B07" stroke-width="0.5"/>
+        <line x1="0" y1="32" x2="0" y2="0" stroke="#FA5B07" stroke-width="0.6"/> <!-- Vertical line from bottom left to top left -->
+      </svg>
+    </div>
+    <!-- Text in the Right Bottom Corner -->
+    <div class="absolute bottom-4 right-4 text-right text-white">
+      <p class="text-4xl poppins-bold outlined-text">SOLIDBASE</p>
 
-    <p class="text-lg mt-1 poppins-bold text-[#FA5B07]">Solidność | Jakość | Zaufanie</p>
+      <p class="text-lg mt-1 poppins-bold text-[#FA5B07]">Solidność | Jakość | Zaufanie</p>
+    </div>
   </div>
 </div>
 
-
-</div>
 
 
 
@@ -365,45 +365,50 @@
    </div>
    </section> -->
 
-   <section class="carousel-background">
-    <div class="relative flex flex-col items-center justify-center p-1">
-      <div class="flex items-center justify-between w-full max-w-screen-lg px-4">
-        <h2 class="text-xl font-bold text-[#E4CFBE]">Nasze projekty</h2>
-        
-        <!-- Horizontal line, thin and in between -->
-        <div class="flex-grow h-px bg-[#B5B5B5] mx-2"></div>
-        
-        <div>
-          <button (click)="previousImage()" class="text-[#CECFCF] p-2 mr-2">
-            <i class="fas fa-long-arrow-alt-left fa-2x"></i>
-          </button>
-          <button (click)="nextImage()" class="bg-[#FA5B07] text-[#CECFCF] p-2">
-            <i class="fas fa-long-arrow-alt-right fa-2x"></i>
-          </button>
-        </div>
-      </div>
-      <div class="flex w-full overflow-hidden mt-9 justify-center items-center" style="height: 300px;">
-        <img *ngFor="let image of displayedImages; let i = index" [src]="image"
-             [ngClass]="{'middle-image': i === 1, 'left-image': i === 0, 'right-image': i === 2}"
-             class="object-cover mx-1 image">
+<!-- Carousel Section -->
+<section class="carousel-background ">
+  <div class="relative flex flex-col items-center justify-center p-1">
+    <div class="flex items-center justify-between w-full max-w-screen-lg px-4">
+      <h2 class="text-xl font-bold text-[#E4CFBE]">Nasze projekty</h2>
+      
+      <!-- Horizontal line, thin and in between -->
+      <div class="flex-grow h-px bg-[#B5B5B5] mx-2"></div>
+      
+      <div>
+        <button (click)="previousImage()" class="text-[#CECFCF] p-2 mr-2">
+          <i class="fas fa-long-arrow-alt-left fa-2x"></i>
+        </button>
+        <button (click)="nextImage()" class="bg-[#FA5B07] text-[#CECFCF] p-2">
+          <i class="fas fa-long-arrow-alt-right fa-2x"></i>
+        </button>
       </div>
     </div>
-  </section>
-
-  <!-- New section for text and button -->
-<section class="text-button-section mt-0 p-0">
-  <p class="project-invitation">Chcesz, aby Twój projekt znalazł się wśród?</p>
-  <h2 class="submit-project">Zgłoś swój projekt już teraz!</h2>
-  <button class="submit-button">Wyceń</button>
+    <div class="flex w-full overflow-hidden mt-9 justify-center items-center" style="height: 300px;">
+      <img *ngFor="let image of displayedImages; let i = index" [src]="image"
+           [ngClass]="{'middle-image': i === 1, 'left-image': i === 0, 'right-image': i === 2}"
+           class="object-cover mx-1 image">
+    </div>
+  </div>
 </section>
+
+<!-- New section for text and button -->
+<section class="text-button-section py-6 flex flex-col items-center">
+  <p class="project-invitation text-center text-lg md:text-xl mb-2">Chcesz, abyśmy zrealizowali Twój projekt?</p>
+  <h2 class="submit-project text-center text-2xl md:text-3xl font-bold mb-4">Zgłoś swój projekt już teraz!</h2>
+  <button class="submit-button bg-[#FA5B07] text-white py-2 px-4 rounded-full">Wyceń</button>
+</section>
+
+
   
   
 <!-- Accordion Section -->
 <hr>
 <section class="flex items-center justify-center py-10 bg-[#F8F5F1]">
-  <div class="flex flex-col md:flex-row items-center max-w-6xl mx-auto">
+  <div class="flex flex-col md:flex-row items-start max-w-6xl mx-auto">
     <div class="md:w-1/2 p-4 relative">
-      <img src="assets/image10.png" alt="Description" class="w-full h-auto rounded-lg shadow-md">
+      <div class="sticky-container">
+        <img src="assets/image10.png" alt="Description" class="w-full h-auto rounded-lg shadow-md">
+      </div>
     </div>
     <div class="md:w-1/2 p-4 bg-[#E4CFBE] rounded-lg shadow-md">
       <div id="accordionExample">
@@ -415,7 +420,7 @@
               <span class="ml-auto text-2xl text-[#14171A] poppins-medium">{{ item.isOpen ? '-' : '+' }}</span>
             </button>
           </h2>
-          <div [ngClass]="{ 'block': item.isOpen, 'hidden': !item.isOpen }" class="transition-all duration-300">
+          <div [ngClass]="{ 'block': item.isOpen, 'hidden': !item.isOpen }" class="transition-all duration-200">
             <div class="py-4 px-5 text-[#14171A] poppins-light">
               {{ item.content }}
             </div>
@@ -427,37 +432,38 @@
 </section>
 <hr>
 
-<!-- Logo Section -->
 
-<!-- logos-section.component.html -->
+<!--! LOGO SECTION ! -->
+
 <section class="bg-[#F8F5F1] py-10">
-  <div class="container mx-auto text-center">
+  <div class="container mx-auto text-center px-4">
     <!-- Center the Solid Base logo -->
     <img src="assets/SB_logo.png" alt="Solid Base Logo" class="mx-auto mb-4 h-16">
 
     <!-- Flex container for the text and button -->
-    <div class="flex justify-between items-center mb-4">
-      <p class="text-lg text-[#14171A] mb-4 flex-1 text-left">Solidność | Jakość | Zaufanie</p>
-      <div class="flex-1 text-right">
-        <p class="text-lg text-[#14171A] mb-4">Dołącz do nas!</p>
+    <div class="flex flex-col md:flex-row justify-between items-center mb-4 space-y-4 md:space-y-0 md:space-x-4">
+      <p class="text-lg text-[#14171A] flex-1 text-left">Solidność | Jakość | Zaufanie</p>
+      <div class="flex-1 flex flex-col md:flex-row md:justify-end items-center space-y-4 md:space-y-0 md:space-x-4">
+        <p class="text-lg text-[#14171A]">Dołącz do nas!</p>
         <a href="/contact" class="bg-[#FA5B07] text-white py-2 px-4 rounded-full inline-block">Kontakt</a>
       </div>
     </div>
 
     <!-- Flex container for "Nasi partnerzy:" and logos -->
-    <div class="flex justify-between items-center mb-4">
-      <p class="text-lg text-[#FA5B07] ml-4">Nasi partnerzy:</p>
+    <div class="flex flex-col md:flex-row justify-between items-center mb-4">
+      <p class="text-lg text-[#FA5B07] ml-0 md:ml-4 mb-4 md:mb-0">Nasi partnerzy:</p>
     </div>
 
     <!-- Flex container for the logos -->
-    <div class="flex justify-center items-center space-x-8 mt-8">
-      <img src="assets/amtech_logo.png" alt="Partner 1" class="h-16">
-      <img src="assets/urban_logo.png" alt="Partner 2" class="h-16">
-      <img src="assets/swiss_logo.png" alt="Partner 3" class="h-16">
+    <div class="flex flex-wrap justify-center items-center space-x-8 mt-8">
+      <img src="assets/amtech_logo.png" alt="Partner 1" class="h-16 mb-4 md:mb-0">
+      <img src="assets/urban_logo.png" alt="Partner 2" class="h-16 mb-4 md:mb-0">
+      <img src="assets/swiss_logo.png" alt="Partner 3" class="h-16 mb-4 md:mb-0 px-4 py-2">
       <!-- Add more logos as needed -->
     </div>
   </div>
 </section>
+
 
 
 
