@@ -1,13 +1,27 @@
 .vision-container {
   background-image: url("/assets/Railways-Road-slab 1.png");
-  background-size:cover;
-  height: 500px;
+  background-size: cover;
+  background-position: center;
+  height: 380px;
+  width: 100%;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
 .container {
     overflow-x: hidden;
-    
+}
+
+@media (min-width: 1000px) {
+  .vision-container {
+    height: 500px;
   }
+}
+
+@media (max-width: 1000px) {
+  .vision-container {
+    height: auto;
+  }
+}
 
   .outlined-text {
     -webkit-text-stroke: 2px #FA5B07; /* specify the width and color of the outline */
@@ -21,6 +35,10 @@
     /* Adjust styling for landscape orientation on smaller devices */
     .container {
       padding: 0 20px; /* Adjust container padding */
+    }
+
+    .vision-container{
+      height: 200px;
     }
   
   }
