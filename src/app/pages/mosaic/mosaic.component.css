@@ -1,16 +1,31 @@
 .grid-container {
     background-image: url("/assets/pexels-pixabay-7931.jpg");
-    background-size:cover;
-    height: 1500px;
+    background-size: cover;
+    height: 300px; /* Height for mobile devices */
+    width: 100%; /* Ensures it fits the width of the container */
   }
-
-.hover-col {
+  
+  .desktop-grid {
+    display: none; /* Hide the grid on mobile devices */
+  }
+  
+  .hover-col {
     background-color: transparent;
     text-align: center;
     transition: background-color 0.5s ease-in-out;
-   
-}
-
-.hover-col:hover {
+  }
+  
+  .hover-col:hover {
     background-color: #f8f5f1e0;
-}
+  }
+  
+  /* Media query for desktop devices */
+  @media (min-width: 768px) {
+    .grid-container {
+      height: 1500px; /* Height for desktop devices */
+    }
+    
+    .desktop-grid {
+      display: block; /* Show the grid on desktop devices */
+    }
+  }
