@@ -1,10 +1,15 @@
+body{
+  overflow-x: hidden;
+}
+
 .vision-container {
   background-image: url("/assets/Railways-Road-slab 1.png");
   background-size: cover;
   background-position: center;
   height: 380px;
   width: 100%;
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  box-sizing: border-box;
+  overflow-x: hidden; /* Include padding and border in the element's total width and height */
 }
 
 .container {
@@ -135,4 +140,20 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+.svg-line {
+  height: 1.2px;
+  width: 130%;
+}
+
+/* Mobile Styles */
+@media (max-width: 767px) {
+  .svg-line {
+    width: 100%;
+  }
+}
+
+body{
+  overflow-x: hidden;
 }
